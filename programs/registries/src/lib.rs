@@ -12,7 +12,7 @@ pub mod errors;
 pub mod events;
 pub mod state;
 
-declare_id!("5regeCXrvfDdUeAqzfuigPBfLaFavxAV9VaYTMH31Mqd");
+declare_id!("7J1mLX2ozMwU6p6mX7zuXMoZf5SBwLBZrGevJHpXP98k");
 
 #[program]
 pub mod registries {
