@@ -54,10 +54,10 @@ To run integration tests, make sure to stop and start the `validator.sh` in a se
 solana airdrop 10000 9fit3w7t6FHATDaZWotpWqN7NpqgL3Lm1hqUop4hAy8h --url localhost && npx ts-node tests/registries.ts
 ```
 
-The deployed program ID must be `PROGRAM_ADDRESS` and corresponds to the `declare_id`
+The deployed program ID must be `7J1mLX2ozMwU6p6mX7zuXMoZf5SBwLBZrGevJHpXP98k` and corresponds to the `declare_id`
 in the `programs/registires/src/lib.rs` and `Anchor.toml` file.
 
 For debugging a program address, after the launch of local validator, run:
 ```
-solana logs -v --url localhost PROGRAM_ADDRESS
+solana logs -v --url localhost 7J1mLX2ozMwU6p6mX7zuXMoZf5SBwLBZrGevJHpXP98k
 ```
