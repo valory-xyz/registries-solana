@@ -1,6 +1,9 @@
 [features]
 seeds = true
 
+[programs.localnet]
+lockbox_governor = "7J1mLX2ozMwU6p6mX7zuXMoZf5SBwLBZrGevJHpXP98k"
+
 [registry]
 url = "https://anchor.projectserum.com"
 
