@@ -1,9 +1,5 @@
 use anchor_lang::prelude::*;
 use anchor_spl::token::{self, Transfer};
-use solana_program::{
-    pubkey::Pubkey,
-    program::invoke_signed
-};
 use spl_token::instruction::{set_authority, AuthorityType};
 
 pub use context::*;
@@ -16,12 +12,11 @@ pub mod errors;
 pub mod events;
 pub mod state;
 
-declare_id!("3bEWaJfLxAe5qTwiqD1hVjLhqdKTcLVrkZZGZM43bWNe");
+declare_id!("5regeCXrvfDdUeAqzfuigPBfLaFavxAV9VaYTMH31Mqd");
 
 #[program]
 pub mod registries {
     use super::*;
-    use solana_program::pubkey;
 
     /// Initializes a Registries account, aka Config, that stores state data.
     pub fn initialize(ctx: Context<InitializeRegistries>) -> Result<()> {

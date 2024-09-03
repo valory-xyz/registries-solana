@@ -1,19 +1,7 @@
 use anchor_lang::prelude::*;
-//use anchor_spl::token::{self, Token, TokenAccount};
-use solana_program::{
-    system_program,
-    sysvar,
-};
+use anchor_lang::system_program;
 
 use crate::{
-//     errors::GovernorError,
-//     message::{
-//         TransferMessage,
-//         TransferAllMessage,
-//         TransferTokenAccountsMessage,
-//         SetUpgradeAuthorityMessage,
-//         UpgradeProgramMessage
-//     },
     state::{Config},
 };
 
@@ -34,6 +22,6 @@ pub struct InitializeRegistries<'info> {
 
     #[account(address = system_program::ID)]
     pub system_program: Program<'info, System>,
-    #[account(address = sysvar::rent::ID)]
+    //#[account(address = sysvar::rent::ID)]
     pub rent: Sysvar<'info, Rent>
 }

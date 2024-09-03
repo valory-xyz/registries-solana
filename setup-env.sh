@@ -5,7 +5,7 @@
 # rm -rf ~/.local/share/solana && rm -rf ~/.cache/solana && rm -rf ~/.cargo && rm -rf ~/.avm
 
 RUSTVER="1.79"
-SOLANAVER="1.18.22"
+SOLANAVER="2.0.8"
 ANCHORVER="0.30.1"
 
 # Quick change of solana version:
