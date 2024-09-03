@@ -1,0 +1,15 @@
+[features]
+seeds = true
+
+[registry]
+url = "https://anchor.projectserum.com"
+
+[provider]
+cluster = "localnet"
+wallet = "artifacts/id.json"
+
+[profile.release]
+overflow-checks = true
+
+[scripts]
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"

@@ -1,5 +1,6 @@
-# Object file
-*.o
-
-# Ada Library Information
-*.ali
+.idea
+.anchor
+node_modules
+target
+!target/deploy/registries-keypair.json
+test-ledger
