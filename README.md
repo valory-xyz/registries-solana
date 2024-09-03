@@ -5,11 +5,11 @@ Set of Autonolas registries contracts on Solana.
 The program requires that the following environment is satisfied:
 ```
 anchor --version
-anchor-cli 0.29.0
+anchor-cli 0.30.1
 solana --version
-solana-cli 1.18.1 (src:5d824a36; feat:756280933, client:SolanaLabs)
+solana-cli 2.0.8 (src:3e7563cd; feat:1420694968, client:Agave)
 rustc --version
-rustc 1.74.1 (a28077b28 2023-12-04)
+rustc 1.79.0 (129f3b996 2024-06-10)
 ```
 
 Advise the script `setup-env.sh` to correctly install the required environment.
