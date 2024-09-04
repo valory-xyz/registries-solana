@@ -27,7 +27,7 @@ pub mod registries {
         config.bump = [ctx.bumps.config];
 
         // Set zero initial values
-        config.total_sol_transferred = 0;
+        config.num_services = 0;
 
         Ok(())
     }

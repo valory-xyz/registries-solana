@@ -6,14 +6,14 @@ use anchor_lang::prelude::*;
 pub struct Config {
     // Config bump
     pub bump: [u8; 1],
-    // Total SOL amount transferred
-    pub total_sol_transferred: u64
+    // Total number of services
+    pub num_services: u64
 }
 
 impl Config {
     pub const LEN: usize = 8 // discriminator
         + 1  // bump
-        + 8  // SOL amount transferred
+        + 8  // Total number of services
     ;
     /// AKA `b"config"`.
     pub const SEED_PREFIX: &'static [u8; 6] = b"config";

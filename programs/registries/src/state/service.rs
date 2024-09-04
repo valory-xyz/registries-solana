@@ -1,9 +1,27 @@
 use anchor_lang::prelude::*;
 
+#[derive(Default, AnchorSerialize, AnchorDeserialize, Clone, PartialEq, Eq)]
+pub struct AgentParams {
+    pub agent_id: u32,
+    pub num_agent_instances: u32,
+    pub bond: u64
+}
+
+impl AgentParams {
+    pub const LEN: usize =
+          32  // agent id
+        + 32  // num agent instances
+        + 64  // bond
+    ;
+}
+
+
 #[account]
 #[derive(Default)]
 /// Service account data.
 pub struct Service {
+    // Service token
+    pub token: Pubkey,
     // Service security deposit
     pub security_deposit: u64,
     // Service multisig address
@@ -19,19 +37,21 @@ pub struct Service {
     pub num_agent_instances: u32,
     // Service state
     pub state: u8,
-    // Set of canonical agent Ids for the service. Individual agent Id is bounded by the max number of agent Id
-    pub agent_ids: Vec<u64>,
+    // Set of canonical agent Ids for the service, each agent corresponding number of agent instances,
+    // and a bond corresponding to each agent Id
+    pub agent_params: Vec<AgentParams>,
 }
 
 impl Service {
     pub const LEN: usize = 8  // discriminator
+        + 32    // token address
         + 8     // security deposit
-        + 32    // multisig
+        + 32    // multisig address
         + 32    // config hash
         + 4     // threshold
         + 4     // max num instances
         + 4     // current num instances
-        + 1024  // agent instances (max 16)
+        + AgentParams::LEN * 16  // agents info (max 16)
     ;
 }
 
